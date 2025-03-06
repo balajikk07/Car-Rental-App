@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Car Rental Booking</string>
+    <string name="google_maps_key">AIzaSyCOsjHHTNnt9qTGUvHdPk_yL5jbo_d-KyA</string>
+    <string name="search_location">Search location</string>
+    <string name="set_pickup_location">Set Pickup Location</string>
+    <string name="current_location">Current Location</string>
+    <string name="pickup_location">Pickup Location</string>
+</resources>
