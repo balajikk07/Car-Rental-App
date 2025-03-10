@@ -13,7 +13,7 @@ import com.google.android.libraries.places.api.net.FindAutocompletePredictionsRe
 import com.google.android.libraries.places.api.net.PlacesClient
 
 class PlacesAutocompleteManager(
-    private val context: Context,
+    context: Context,
     private val placesClient: PlacesClient
 ) {
     private val sessionToken = AutocompleteSessionToken.newInstance()
@@ -64,7 +64,8 @@ class PlacesAutocompleteManager(
     }
 
     private fun fetchPlaceDetails(placeId: String, onPlaceSelected: (LatLng, String) -> Unit) {
-        val request = FetchPlaceRequest.newInstance(placeId, listOf(Place.Field.LAT_LNG, Place.Field.NAME))
+        val request =
+            FetchPlaceRequest.newInstance(placeId, listOf(Place.Field.LAT_LNG, Place.Field.NAME))
         placesClient.fetchPlace(request).addOnSuccessListener { response ->
             val place = response.place
             place.latLng?.let { latLng ->
